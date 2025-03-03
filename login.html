@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function logIn(event){
+            event.preventDefault();
+            let username = document.getElementsByName('textboxusername')[0].value;
+            let password = document.getElementsByName('textboxmatkhau')[0].value;
+
+            if (username === "admin" && password === "admin") {
+                window.location.href = "home.html"; 
+            } else {
+                alert("Invalid username or password!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form onsubmit="logIn(event)">
+        <label for="textboxusername">tên đăng nhập</label>
+        <input type="text" name="textboxusername" id="textboxusername">
+        <label for="textboxmatkhau">mật khẩu</label>
+        <input type="password" name="textboxmatkhau" id="textboxmatkhau">
+        <button type="submit" id="btnlogin">đăng nhập</button>
+    </form>
+</body>
+</html>
